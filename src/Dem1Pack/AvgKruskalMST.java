@@ -31,7 +31,7 @@ public class AvgKruskalMST {
             a.printStackTrace();
         }
 
-        System.out.println("The Average-MST calculated using Kruskal's Algorithm is " + (total_weight/count));
+        System.out.println("The Average-MST calculated for Kruskal's Algorithm is " + (total_weight/count));
 
     }
 

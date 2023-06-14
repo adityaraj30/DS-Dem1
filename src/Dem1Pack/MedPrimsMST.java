@@ -4,13 +4,19 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import edu.princeton.cs.algs4.*;
+import java.util.ArrayList;
+import java.util.Comparator;
 
-public class AvgPrimsMST {
+public class MedPrimsMST {
 
     public static void main(String[] args) {
+        ArrayList<Double> Weights = new ArrayList<Double>();
         BufferedReader read;
-        float count=0;
-        float total_weight=0;
+        int count=0;
+        int temp_index;
+        double median;
+
+
 
         try {
             read = new BufferedReader(new FileReader("GraphList.txt"));
@@ -22,7 +28,7 @@ public class AvgPrimsMST {
                 EdgeWeightedGraph G = new EdgeWeightedGraph(in);
                 PrimMST mst = new PrimMST(G);
 
-                total_weight+=mst.weight();
+                Weights.add(mst.weight());
                 line = read.readLine();
             }
 
@@ -30,8 +36,18 @@ public class AvgPrimsMST {
         } catch (IOException a) {
             a.printStackTrace();
         }
+        Weights.sort(Comparator.naturalOrder());
 
-        System.out.println("The Average-MST calculated for Prim's Algorithm is " + (total_weight/count));
+        if(count % 2 == 0){
+            temp_index = (((count/2) + ((count/2)+1))/2)-1;
+            median = Weights.get(temp_index);
+        }
+        else{
+            temp_index = ((count+1)/2)-1;
+            median = Weights.get(temp_index);
+        }
+
+        System.out.println("The Median-MST calculated for Prim's Algorithm is " + median);
 
     }
 

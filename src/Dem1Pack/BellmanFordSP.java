@@ -279,8 +279,8 @@ public class BellmanFordSP {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        In in = new In("G1.txt");    //Original args[0]
-        int s = Integer.parseInt("5");      //Original args[1]
+        In in = new In(args[0]);    //Original args[0]
+        int s = Integer.parseInt(args[1]);      //Original args[1]
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
 
         BellmanFordSP sp = new BellmanFordSP(G, s);

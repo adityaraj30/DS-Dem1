@@ -194,7 +194,7 @@ public class KruskalMST {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        In in = new In("tinyEWD.txt");
+        In in = new In(args[0]);
         EdgeWeightedGraph G = new EdgeWeightedGraph(in);
         KruskalMST mst = new KruskalMST(G);
         for (Edge e : mst.edges()) {
