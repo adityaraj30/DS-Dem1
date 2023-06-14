@@ -1,17 +1,38 @@
 package Dem1Pack;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import edu.princeton.cs.algs4.*;
 
 public class AvgPrimsMST {
 
-    public static void main(String args[]){
-        In in = new In("G3.txt");            //Original : args[0]
-        EdgeWeightedGraph G = new EdgeWeightedGraph(in);
-        PrimMST mst = new PrimMST(G);
-        for (Edge e : mst.edges()) {
-            StdOut.println(e);
+    public static void main(String[] args) {
+        BufferedReader read;
+        float count=0;
+        float total_weight=0;
+
+        try {
+            read = new BufferedReader(new FileReader("GraphList.txt"));
+            String line = read.readLine();
+
+            while (line != null) {
+                count++;
+                In in = new In(line);
+                EdgeWeightedGraph G = new EdgeWeightedGraph(in);
+                PrimMST mst = new PrimMST(G);
+
+                total_weight+=mst.weight();
+                line = read.readLine();
+            }
+
+            read.close();
+        } catch (IOException a) {
+            a.printStackTrace();
         }
-        StdOut.printf("%.5f\n", mst.weight());
+
+        System.out.println("The Average-MST calculated using Prim's Algorithm is " + (total_weight/count));
+
     }
 
 }
