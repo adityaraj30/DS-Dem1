@@ -88,7 +88,7 @@ public class DijkstraSP {
 
         for (int v = 0; v < G.V(); v++)
             distTo[v] = Double.POSITIVE_INFINITY;
-        distTo[s] = 0.0;
+        distTo[s] = 0;
 
         // relax vertices in order of distance from s
         pq = new IndexMinPQ<Double>(G.V());
@@ -172,7 +172,7 @@ public class DijkstraSP {
         }
 
         // check that distTo[v] and edgeTo[v] are consistent
-        if (distTo[s] != 0.0 || edgeTo[s] != null) {
+        if (distTo[s] != 0 || edgeTo[s] != null) {
             System.err.println("distTo[s] and edgeTo[s] inconsistent");
             return false;
         }
@@ -222,15 +222,15 @@ public class DijkstraSP {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
-        In in = new In(args[0]);
+        In in = new In("G2.txt");
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
-        int s = Integer.parseInt(args[1]);
+        for (int s = 0; s < G.V(); s++)
+        {
+            // compute shortest paths
+            DijkstraSP sp = new DijkstraSP(G, s);
 
-        // compute shortest paths
-        DijkstraSP sp = new DijkstraSP(G, s);
 
-
-        // print shortest path
+            // print shortest path
         for (int t = 0; t < G.V(); t++) {
             if (sp.hasPathTo(t)) {
                 StdOut.printf("%d to %d (%.2f)  ", s, t, sp.distTo(t));
@@ -240,8 +240,11 @@ public class DijkstraSP {
                 StdOut.println();
             }
             else {
-                StdOut.printf("%d to %d         no path\n", s, t);
+                StdOut.printf("%d to %d       no path\n", s, t);
+
             }
+        }
+
         }
     }
 
