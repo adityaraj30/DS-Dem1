@@ -7,10 +7,15 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class AvgDijkstraSP {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader read;
+        BufferedReader read1;
         float count=0;
-        double[][] pArray = new double[6][6];
+        read1 = new BufferedReader(new FileReader("GraphList.txt"));
+        String line1 = read1.readLine();
+        In in1 = new In(line1);
+        EdgeWeightedDigraph G1 = new EdgeWeightedDigraph(in1);
+        double[][] pArray = new double[G1.V()][G1.V()];
 
         try {
             read = new BufferedReader(new FileReader("GraphList.txt"));
@@ -20,6 +25,7 @@ public class AvgDijkstraSP {
                 count++;
                 In in = new In(line);
                 EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
+
 
                 for (int s = 0; s < G.V(); s++)
                 {

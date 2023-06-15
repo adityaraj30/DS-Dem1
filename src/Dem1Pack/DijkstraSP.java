@@ -222,14 +222,13 @@ public class DijkstraSP {
      * @param args the command-line arguments
      */
     public static void main(String[] args) {
+
         In in = new In("G2.txt");
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
         for (int s = 0; s < G.V(); s++)
         {
             // compute shortest paths
             DijkstraSP sp = new DijkstraSP(G, s);
-
-
             // print shortest path
         for (int t = 0; t < G.V(); t++) {
             if (sp.hasPathTo(t)) {
