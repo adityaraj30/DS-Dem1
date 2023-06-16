@@ -1,9 +1,8 @@
 package Dem1Pack;
 
 import edu.princeton.cs.algs4.*;
-
-import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 
 public class AvgDijkstraSP {
@@ -17,7 +16,7 @@ public class AvgDijkstraSP {
         EdgeWeightedDigraph G1 = new EdgeWeightedDigraph(in1);
         double[][] pArray = new double[G1.V()][G1.V()];
 
-        try {
+
             read = new BufferedReader(new FileReader("GraphList.txt"));
             String line = read.readLine();
 
@@ -45,10 +44,7 @@ public class AvgDijkstraSP {
             }
 
             read.close();
-        }
-        catch (IOException a) {
-            a.printStackTrace();
-        }
+
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 if (pArray[i][j] / count == 0){

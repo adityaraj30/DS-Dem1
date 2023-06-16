@@ -1,7 +1,7 @@
 package Dem1Pack;
 
-import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.BufferedReader;
 import java.io.IOException;
 import edu.princeton.cs.algs4.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Comparator;
 
 public class MedKruskalMST {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         ArrayList<Double> Weights = new ArrayList<Double>();
         BufferedReader read;
         int count=0;
@@ -18,7 +18,7 @@ public class MedKruskalMST {
 
 
 
-        try {
+
             read = new BufferedReader(new FileReader("GraphList.txt"));
             String line = read.readLine();
 
@@ -33,9 +33,7 @@ public class MedKruskalMST {
             }
 
             read.close();
-        } catch (IOException a) {
-            a.printStackTrace();
-        }
+
         Weights.sort(Comparator.naturalOrder());
 
         if(count % 2 == 0){
