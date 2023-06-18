@@ -45,8 +45,8 @@ public class AvgDijkstraSP {
 
             read.close();
 
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 6; j++) {
+        for (int i = 0; i < G1.V(); i++) {
+            for (int j = 0; j < G1.V(); j++) {
                 if (pArray[i][j] / count == 0){
                     StdOut.printf("%d to %d   (no path)", i, j);
                     System.out.println();
