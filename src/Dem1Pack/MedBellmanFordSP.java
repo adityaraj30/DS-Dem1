@@ -100,10 +100,10 @@ public class MedBellmanFordSP {
                 }
 
                 if(medianGen!=0) {
-                    System.out.println(i + " to " + j + " Median-MST ----   " + medianGen);
+                    System.out.println(i + " to " + j + " Median-SP ----   " + medianGen);
                 }
                 else{
-                    System.out.println(i + " to " + j + " Median-MST ----   No Path" );
+                    System.out.println(i + " to " + j + " Median-SP ----   No Path" );
                 }
             }
         }

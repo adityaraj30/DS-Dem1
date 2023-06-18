@@ -223,7 +223,7 @@ public class DijkstraSP {
      */
     public static void main(String[] args) {
 
-        In in = new In("G2.txt");
+        In in = new In(args[0]);
         EdgeWeightedDigraph G = new EdgeWeightedDigraph(in);
         for (int s = 0; s < G.V(); s++)
         {
