@@ -44,15 +44,15 @@ public class AvgDijkstraSP {
             }
 
             read.close();
-
+        System.out.println("By Dijkstra's Algorithm ----");
         for (int i = 0; i < G1.V(); i++) {
             for (int j = 0; j < G1.V(); j++) {
                 if (pArray[i][j] / count == 0){
-                    StdOut.printf("%d to %d   (no path)", i, j);
+                    StdOut.printf("%d to %d Average-SP ----   No Path", i, j);
                     System.out.println();
                 }
                 else {
-                    StdOut.printf("%d to %d   (%.2f)", i, j, pArray[i][j] / count);
+                    StdOut.printf("%d to %d Average-SP ----   %.2f", i, j, pArray[i][j] / count);
                     System.out.println();
                 }
             }

@@ -48,14 +48,15 @@ public class MinBellmanFordSP {
 
         read.close();
 
+        System.out.println("By Bellman-Ford's Algorithm ----");
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 if (pArray[i][j] == Double.POSITIVE_INFINITY){
-                    StdOut.printf("%d to %d   (no path)", i, j);
+                    StdOut.printf("%d to %d Min-SP ----   No Path", i, j);
                     System.out.println();
                 }
                 else {
-                    StdOut.printf("%d to %d   (%.2f)", i, j, pArray[i][j]);
+                    StdOut.printf("%d to %d Min-SP ----   %.2f", i, j, pArray[i][j]);
                     System.out.println();
                 }
             }
