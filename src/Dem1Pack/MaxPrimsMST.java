@@ -30,7 +30,7 @@ public class MaxPrimsMST {
 
             read.close();
 
-        System.out.println("The Min-MST calculated for Prim's Algorithm is " + new_weight);
+        System.out.println("The Max-MST calculated for Prim's Algorithm is " + new_weight);
 
     }
 

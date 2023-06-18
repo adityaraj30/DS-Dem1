@@ -48,7 +48,7 @@ public class MinBellmanFordSP {
 
         read.close();
 
-        System.out.println("By Bellman-Ford's Algorithm ----");
+        System.out.println("Min-SP calculated for Bellman-Ford's Algorithm ----");
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
                 if (pArray[i][j] == Double.POSITIVE_INFINITY){

@@ -79,7 +79,7 @@ public class MedBellmanFordSP {
 
             */
 
-
+        System.out.println("Median-SP calculated for Bellman-Ford's Algorithm ----");
         int temp_index;
         double medianGen;
         for (int i = 0; i < numVertices; i++) {

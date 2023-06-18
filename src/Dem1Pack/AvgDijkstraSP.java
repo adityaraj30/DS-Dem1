@@ -44,7 +44,7 @@ public class AvgDijkstraSP {
             }
 
             read.close();
-        System.out.println("By Dijkstra's Algorithm ----");
+        System.out.println("Average-SP calculated for Dijkstra's Algorithm ----");
         for (int i = 0; i < G1.V(); i++) {
             for (int j = 0; j < G1.V(); j++) {
                 if (pArray[i][j] / count == 0){

@@ -48,7 +48,7 @@ public class MinDijkstraSP {
 
         read.close();
 
-        System.out.println("By Dijkstra's Algorithm ----");
+        System.out.println("Min-SP calculated for Dijkstra's Algorithm ----");
         for (int i = 0; i < G1.V(); i++) {
             for (int j = 0; j < G1.V(); j++) {
                 if (pArray[i][j] == Double.POSITIVE_INFINITY){

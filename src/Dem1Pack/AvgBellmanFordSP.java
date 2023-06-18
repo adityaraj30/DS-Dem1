@@ -46,7 +46,7 @@ public class AvgBellmanFordSP {
 
             read.close();
 
-        System.out.println("By Bellman-Ford's Algorithm ----");
+        System.out.println("Average-SP calculated for Bellman-Ford's Algorithm ----");
         for (int i = 0; i < G1.V(); i++) {
             for (int j = 0; j < G1.V(); j++) {
                 if (arrayarr[i][j] / till == 0){

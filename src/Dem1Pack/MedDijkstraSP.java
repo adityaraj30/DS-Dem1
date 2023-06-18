@@ -79,8 +79,8 @@ public class MedDijkstraSP {
 
             */
 
-
-            int temp_index;
+        System.out.println("Median-SP calculated for Dijkstra's Algorithm ----");
+        int temp_index;
             double medianGen;
             for (int i = 0; i < numVertices; i++) {
                 indArr.clear();

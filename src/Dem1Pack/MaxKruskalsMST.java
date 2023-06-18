@@ -29,7 +29,7 @@ public class MaxKruskalsMST {
 
             read.close();
 
-        System.out.println("The Min-MST calculated for Kruskal's Algorithm is " + new_weight);
+        System.out.println("The Max-MST calculated for Kruskal's Algorithm is " + new_weight);
 
     }
 

@@ -42,7 +42,7 @@ public class MaxBellmanFordSP {
 
         read.close();
 
-        System.out.println("By Bellman-Ford's Algorithm ----");
+        System.out.println("Max-SP calculated for Bellman-Ford's Algorithm ----");
         for (int i = 0; i < G1.V(); i++) {
             for (int j = 0; j < G1.V(); j++) {
                 if (pArray[i][j] == 0 && i != j){
